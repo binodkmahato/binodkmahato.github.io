@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en" <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Binod Kumar Mahato | Government Official</title>
+
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#2563eb',
+          dark: '#0f172a'
+        }
+      }
+    }
+  }
+</script>
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+
+  <!-- ================= CLEAN NAVBAR ================= -->
+  <header class="fixed top-0 left-0 z-50 w-full border-b border-slate-200/70 bg-white/90 backdrop-blur-md">
+    <nav class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+      <div class="flex h-[72px] items-center justify-between">
+
+        <!-- Logo -->
+        <a href="#home" class="group flex items-center gap-3">
+          <div class="relative flex h-10 w-10 items-center justify-center
+                            rounded-xl bg-slate-950 text-sm font-black text-white
+                            shadow-md transition duration-300
+                            group-hover:bg-blue-600">
+            BK
+
+            <span class="absolute -right-1 -top-1
+                                 h-2.5 w-2.5 rounded-full
+                                 border-2 border-white bg-blue-500">
+            </span>
+          </div>
+
+          <div class="hidden sm:block leading-none">
+            <h1 class="text-sm font-extrabold tracking-tight text-slate-900">
+              Binod Kumar
+            </h1>
+            <p class="mt-1 text-[10px] font-medium uppercase
+                              tracking-[0.18em] text-slate-400">
+              Mahato
+            </p>
+          </div>
+        </a>
+
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#about" class="text-sm font-semibold text-slate-500
+                          transition duration-300 hover:text-blue-600">
+            About
+          </a>
+
+          <a href="#blogs" class="text-sm font-semibold text-slate-500
+                          transition duration-300 hover:text-blue-600">
+            Blogs
+          </a>
+
+          <a href="#portfolio" class="text-sm font-semibold text-slate-500
+                          transition duration-300 hover:text-blue-600">
+            Portfolio
+          </a>
+        </div>
+
+
+        <!-- Contact -->
+        <a href="#contact" class="hidden sm:inline-flex items-center gap-2
+                      rounded-full bg-blue-600 px-5 py-2.5
+                      text-sm font-bold text-white
+                      shadow-md shadow-blue-100
+                      transition duration-300
+                      hover:-translate-y-0.5 hover:bg-blue-700">
+
+          Contact Me
+
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+
+
+        <button id="menuBtn" type="button" aria-label="Open navigation" aria-expanded="false" class="grid h-10 w-10 place-items-center
+               rounded-xl bg-slate-100
+               text-slate-700
+               transition hover:bg-slate-900
+               hover:text-white md:hidden">
+
+          <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+
+
+
+        <!-- ================= MOBILE SIDEBAR ================= -->
+
+        <!-- Overlay -->
+        <div id="menuOverlay" class="pointer-events-none fixed inset-0 z-[60]
+            bg-slate-950/40 opacity-0 backdrop-blur-sm
+            transition-opacity duration-300 md:hidden">
+        </div>
+
+
+        <!-- Sidebar -->
+        <aside id="mobileMenu" class="pointer-events-none fixed right-0 top-0 z-[70]
+              h-screen w-full translate-x-full
+              bg-white shadow-2xl
+              transition-transform duration-300 ease-out
+              md:hidden">
+
+          <!-- Header -->
+          <div class="flex h-[72px] items-center
+                justify-between border-b border-slate-100 px-5">
+
+            <div class="flex items-center gap-3">
+
+              <div class="flex h-10 w-10 items-center
+                        justify-center rounded-xl
+                        bg-slate-950 text-sm
+                        font-black text-white">
+                BK
+              </div>
+
+              <div class="leading-none">
+                <p class="text-sm font-extrabold text-slate-900">
+                  Binod Kumar
+                </p>
+
+                <p class="mt-1 text-[10px] font-medium
+                          uppercase tracking-[0.18em]
+                          text-slate-400">
+                  Mahato
+                </p>
+              </div>
+
+            </div>
+
+
+            <!-- CLOSE BUTTON -->
+            <button id="closeMenu" type="button" aria-label="Close navigation" class="relative z-[80] grid h-10 w-10
+                       place-items-center rounded-xl
+                       bg-slate-100 text-slate-700
+                       transition hover:bg-slate-900
+                       hover:text-white">
+
+              <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+          </div>
+
+
+          <!-- Navigation -->
+          <div class="flex h-[calc(100vh-72px)]
+                flex-col px-5 py-8">
+
+            <p class="mb-4 text-[10px] font-bold
+                  uppercase tracking-[0.2em]
+                  text-slate-400">
+              Navigation
+            </p>
+
+
+            <nav class="space-y-2">
+
+              <a href="#home" class="mobile-link flex items-center
+                      justify-between rounded-2xl
+                      bg-slate-50 px-5 py-4
+                      text-base font-bold text-slate-800
+                      transition hover:bg-blue-50
+                      hover:text-blue-600">
+
+                Home
+
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+
+              </a>
+
+
+              <a href="#about" class="mobile-link flex items-center
+                      justify-between rounded-2xl
+                      bg-slate-50 px-5 py-4
+                      text-base font-bold text-slate-800
+                      transition hover:bg-blue-50
+                      hover:text-blue-600">
+
+                About
+
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+
+              </a>
+
+
+              <a href="#blogs" class="mobile-link flex items-center
+                      justify-between rounded-2xl
+                      bg-slate-50 px-5 py-4
+                      text-base font-bold text-slate-800
+                      transition hover:bg-blue-50
+                      hover:text-blue-600">
+
+                Blogs
+
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+
+              </a>
+
+
+              <a href="#portfolio" class="mobile-link flex items-center
+                      justify-between rounded-2xl
+                      bg-slate-50 px-5 py-4
+                      text-base font-bold text-slate-800
+                      transition hover:bg-blue-50
+                      hover:text-blue-600">
+
+                Portfolio
+
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+
+              </a>
+
+            </nav>
+
+
+            <!-- Bottom Contact -->
+            <div class="mt-auto">
+
+              <a href="#contact" class="mobile-link flex w-full
+                      items-center justify-center
+                      gap-3 rounded-2xl
+                      bg-blue-600 px-5 py-4
+                      text-sm font-bold text-white
+                      shadow-lg shadow-blue-100
+                      transition hover:bg-blue-700">
+
+                Contact Me
+
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+
+              </a>
+
+              <p class="mt-6 text-center
+                      text-[11px] text-slate-400">
+                © 2026 Binod Kumar Mahato
+              </p>
+
+            </div>
+
+          </div>
+
+        </aside>
+    </nav>
+  </header>
+
+
+  <!-- ================= HERO ================= -->
+  <main>
+
+    <section id="home" class="relative flex min-h-screen flex-col overflow-hidden
+           bg-gradient-to-br from-slate-50 via-white to-blue-50">
+
+      <!-- Background Decoration -->
+      <div class="pointer-events-none absolute -right-40 -top-40
+                h-[500px] w-[500px] rounded-full
+                bg-blue-100/50 blur-3xl">
+      </div>
+
+      <div class="pointer-events-none absolute -bottom-40 -left-40
+                h-[400px] w-[400px] rounded-full
+                bg-slate-200/40 blur-3xl">
+      </div>
+
+
+      <!-- Hero Content -->
+      <div class="relative z-10 flex flex-1 items-center">
+
+        <div class="mx-auto w-full max-w-7xl
+                    px-5 pt-24 sm:px-8
+                    lg:px-10 lg:pt-20">
+
+          <div class="grid items-center
+                        gap-12 lg:grid-cols-[1fr_0.85fr]
+                        lg:gap-16">
+
+
+            <!-- ================= LEFT CONTENT ================= -->
+            <div class="order-2 text-center lg:order-1 lg:text-left">
+
+              <!-- Label -->
+              <div class="mb-5 flex items-center justify-center gap-3 lg:justify-start">
+                <span class="h-px w-10 bg-blue-600"></span>
+
+                <p class="text-xs font-bold uppercase
+                  tracking-[0.2em] text-blue-600
+                  sm:text-sm">
+                  Professional Profile
+                </p>
+              </div>
+
+
+              <!-- Main Heading -->
+              <h1 class="font-black leading-[0.95]
+               tracking-[-0.05em] text-slate-950
+               text-4xl sm:text-5xl
+               lg:text-6xl xl:text-[4.5rem]">
+
+                I'm
+
+                <span class="block text-blue-600">
+                  Binod Kumar
+                </span>
+
+                <span class="block">
+                  Mahato.
+                </span>
+
+              </h1>
+
+
+              <!-- Professional Summary -->
+              <p class="mx-auto mt-7 max-w-xl
+              text-sm leading-7 text-slate-500
+              sm:text-base lg:mx-0">
+
+                A dedicated and responsible professional committed
+                to public service, administrative excellence, and
+                serving the community with integrity. I believe in
+                disciplined work, effective communication, and
+                responsible execution of duties. My professional
+                approach is focused on continuous learning,
+                accountability, and contributing positively to the
+                organization and the people I serve.
+
+              </p>
+
+
+              <!-- Buttons -->
+              <div class="mt-8 flex w-full flex-col gap-3
+                sm:flex-row sm:justify-center
+                lg:justify-start">
+
+                <!-- Learn More -->
+                <a href="#about" class="group inline-flex w-full
+                  items-center justify-center gap-3
+                  rounded-full bg-blue-600
+                  px-6 py-3.5
+                  text-sm font-bold text-white
+                  shadow-lg shadow-blue-200
+                  transition duration-300
+                  hover:-translate-y-1
+                  hover:bg-blue-700
+                  sm:w-auto">
+
+                  Learn More
+
+                  <span class="grid h-6 w-6 place-items-center
+                         rounded-full bg-white/20
+                         transition
+                         group-hover:translate-x-1">
+
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+
+                  </span>
+
+                </a>
+
+
+                <!-- Download CV -->
+                <a href="cv.pdf" download class="inline-flex w-full
+                  items-center justify-center gap-2
+                  rounded-full border border-slate-200
+                  bg-white px-6 py-3.5
+                  text-sm font-bold text-slate-700
+                  shadow-sm
+                  transition duration-300
+                  hover:-translate-y-1
+                  hover:border-blue-600
+                  hover:text-blue-600
+                  sm:w-auto">
+
+                  <i class="fa-regular fa-file-lines"></i>
+
+                  Download CV
+
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <!-- ================= MODERN PORTRAIT ================= -->
+            <div class="order-1 flex justify-center lg:order-2 lg:justify-end">
+
+              <div class="relative w-[290px] sm:w-[350px] lg:w-[420px] xl:w-[460px]">
+
+                <!-- Large background shape -->
+                <div class="absolute inset-x-3 top-5 bottom-0
+                    rounded-t-[10rem]
+                    rounded-b-[3rem]
+                    bg-blue-100">
+                </div>
+
+                <!-- Offset decorative shape -->
+                <div class="absolute -right-5 -top-5
+                    h-full w-full
+                    rounded-t-[10rem]
+                    rounded-b-[3rem]
+                    border border-blue-200">
+                </div>
+
+
+                <!-- Portrait Container -->
+                <div class="relative z-10
+                    overflow-hidden
+                    rounded-t-[10rem]
+                    rounded-b-[3rem]
+                    border-[7px] border-white
+                    bg-gradient-to-b from-slate-100 to-blue-50
+                    shadow-[0_30px_70px_rgba(15,23,42,0.15)]">
+
+                  <img src="binod.png" alt="Binod Kumar Mahato" class="block w-full h-auto
+                        transition duration-700
+                        hover:scale-[1.03]">
+
+                </div>
+
+
+                <!-- Modern Accent -->
+                <div class="absolute bottom-8 right-0 z-20
+                    flex h-14 w-14 items-center justify-center
+                    rounded-2xl border-4 border-white
+                    bg-blue-600 text-white
+                    shadow-xl">
+
+                  <i class="fa-solid fa-arrow-up-right text-sm"></i>
+
+                </div>
+
+
+                <!-- Decorative Dots -->
+                <div class="absolute left-0 top-20 z-0
+                    grid grid-cols-4 gap-2">
+
+                  <span class="h-2 w-2 rounded-full bg-blue-400"></span>
+                  <span class="h-2 w-2 rounded-full bg-blue-400"></span>
+                  <span class="h-2 w-2 rounded-full bg-blue-400"></span>
+                  <span class="h-2 w-2 rounded-full bg-blue-400"></span>
+
+                  <span class="h-2 w-2 rounded-full bg-blue-400"></span>
+                  <span class="h-2 w-2 rounded-full bg-blue-400"></span>
+                  <span class="h-2 w-2 rounded-full bg-blue-400"></span>
+                  <span class="h-2 w-2 rounded-full bg-blue-400"></span>
+
+                  <span class="h-2 w-2 rounded-full bg-blue-400"></span>
+                  <span class="h-2 w-2 rounded-full bg-blue-400"></span>
+                  <span class="h-2 w-2 rounded-full bg-blue-400"></span>
+                  <span class="h-2 w-2 rounded-full bg-blue-400"></span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ================= FOOTER ================= -->
+      <footer class="relative z-20
+               border-t border-slate-200/70
+               bg-white/60">
+
+        <div class="mx-auto max-w-7xl
+                px-5 py-4
+                sm:px-8 lg:px-10">
+
+          <div class="grid grid-cols-1
+                    items-center gap-3
+                    text-center
+                    md:grid-cols-3">
+
+            <!-- Copyright -->
+            <div class="md:text-left">
+              <p class="text-xs font-medium text-slate-500">
+                © 2026
+                <span class="font-semibold text-slate-800">
+                  Binod Kumar Mahato
+                </span>
+              </p>
+            </div>
+
+
+            <!-- Social Media -->
+            <div class="flex justify-center">
+
+              <div class="flex items-center gap-2">
+
+                <a href="#" aria-label="Facebook" class="grid h-8 w-8 place-items-center
+                              rounded-full bg-slate-900
+                              text-xs text-white
+                              transition duration-300
+                              hover:-translate-y-1
+                              hover:bg-blue-600">
+
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#" aria-label="LinkedIn" class="grid h-8 w-8 place-items-center
+                              rounded-full bg-slate-900
+                              text-xs text-white
+                              transition duration-300
+                              hover:-translate-y-1
+                              hover:bg-blue-600">
+
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="#" aria-label="Instagram" class="grid h-8 w-8 place-items-center
+                              rounded-full bg-slate-900
+                              text-xs text-white
+                              transition duration-300
+                              hover:-translate-y-1
+                              hover:bg-blue-600">
+
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" aria-label="X" class="grid h-8 w-8 place-items-center
+                              rounded-full bg-slate-900
+                              text-xs text-white
+                              transition duration-300
+                              hover:-translate-y-1
+                              hover:bg-blue-600">
+
+                  <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <!-- Designed By -->
+            <div class="md:text-right">
+
+              <p class="text-xs font-medium text-slate-400">
+                Designed by
+                <span class="font-bold text-slate-700">
+                  Ram Bahadur
+                </span>
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </footer>
+
+    </section>
+
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const closeMenu = document.getElementById("closeMenu");
+      const menuOverlay = document.getElementById("menuOverlay");
+      const menuIcon = menuBtn?.querySelector("i");
+
+      if (!menuBtn || !mobileMenu || !closeMenu || !menuOverlay) {
+        return;
+      }
+
+
+      // ================= OPEN =================
+
+      function openMenu() {
+
+        mobileMenu.classList.remove(
+          "translate-x-full",
+          "pointer-events-none"
+        );
+
+        mobileMenu.classList.add(
+          "translate-x-0",
+          "pointer-events-auto"
+        );
+
+
+        menuOverlay.classList.remove(
+          "opacity-0",
+          "pointer-events-none"
+        );
+
+        menuOverlay.classList.add(
+          "opacity-100",
+          "pointer-events-auto"
+        );
+
+
+        menuBtn.setAttribute("aria-expanded", "true");
+
+        if (menuIcon) {
+          menuIcon.classList.remove("fa-bars");
+          menuIcon.classList.add("fa-xmark");
+        }
+
+        document.body.classList.add("overflow-hidden");
+      }
+
+
+      // ================= CLOSE =================
+
+      function closeMobileMenu() {
+
+        mobileMenu.classList.remove(
+          "translate-x-0",
+          "pointer-events-auto"
+        );
+
+        mobileMenu.classList.add(
+          "translate-x-full",
+          "pointer-events-none"
+        );
+
+
+        menuOverlay.classList.remove(
+          "opacity-100",
+          "pointer-events-auto"
+        );
+
+        menuOverlay.classList.add(
+          "opacity-0",
+          "pointer-events-none"
+        );
+
+
+        menuBtn.setAttribute("aria-expanded", "false");
+
+        if (menuIcon) {
+          menuIcon.classList.remove("fa-xmark");
+          menuIcon.classList.add("fa-bars");
+        }
+
+        document.body.classList.remove("overflow-hidden");
+      }
+
+
+      // ================= BUTTONS =================
+
+      menuBtn.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+
+        const isOpen =
+          menuBtn.getAttribute("aria-expanded") === "true";
+
+        if (isOpen) {
+          closeMobileMenu();
+        } else {
+          openMenu();
+        }
+      });
+
+
+      closeMenu.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+
+        closeMobileMenu();
+      });
+
+
+      // ================= OVERLAY =================
+
+      menuOverlay.addEventListener("click", () => {
+        closeMobileMenu();
+      });
+
+
+      // ================= MENU LINKS =================
+
+      document.querySelectorAll(".mobile-link").forEach(link => {
+
+        link.addEventListener("click", () => {
+          closeMobileMenu();
+        });
+
+      });
+
+
+      // ================= ESCAPE =================
+
+      document.addEventListener("keydown", event => {
+
+        if (event.key === "Escape") {
+          closeMobileMenu();
+        }
+
+      });
+
+
+      // ================= DESKTOP RESIZE =================
+
+      window.addEventListener("resize", () => {
+
+        if (window.innerWidth >= 768) {
+          closeMobileMenu();
+        }
+
+      });
+
+    });
+  </script>
+</body>
+
+</html>
